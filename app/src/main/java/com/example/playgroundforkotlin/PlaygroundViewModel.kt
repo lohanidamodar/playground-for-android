@@ -43,7 +43,7 @@ class PlaygroundViewModel : ViewModel() {
                 _getAccount()
                 var json = response.body?.string() ?: ""
                 json = JSONObject(json).toString(8)
-            } catch( e: AppwriteException) {
+            } catch( e: Exception) {
                 Toast.makeText(context, e.message, Toast.LENGTH_SHORT).show()
             }
         }
@@ -56,7 +56,7 @@ class PlaygroundViewModel : ViewModel() {
                 var json = response.body?.string() ?: ""
                 var user = JSONObject(json)
                 _user.postValue(user)
-            } catch( e: AppwriteException) {
+            } catch( e: Exception) {
                 Log.d("Get Account", e.message.toString())
             }
         }
@@ -70,7 +70,7 @@ class PlaygroundViewModel : ViewModel() {
                     "appwrite-callback-6070749e6acd4://demo.appwrite.io/auth/oauth2/success",
                     "appwrite-callback-6070749e6acd4://demo.appwrite.io/auth/oauth2/failur"
                 )
-            } catch( e: AppwriteException) {
+            } catch( e: Exception) {
                 Toast.makeText(context, e.message, Toast.LENGTH_SHORT).show()
             }
         }
@@ -82,7 +82,7 @@ class PlaygroundViewModel : ViewModel() {
                 var response = account.deleteSession("current")
                 _user.postValue(null)
                 Toast.makeText(context, "Logged out", Toast.LENGTH_LONG).show()
-            } catch( e: AppwriteException) {
+            } catch( e: Exception) {
                 Toast.makeText(context, e.message, Toast.LENGTH_SHORT).show()
             }
         }
@@ -96,7 +96,7 @@ class PlaygroundViewModel : ViewModel() {
                 var json = response.body?.string() ?: ""
                 json = JSONObject(json).toString(8)
                 Toast.makeText(context, json, Toast.LENGTH_LONG).show()
-            } catch (e: AppwriteException) {
+            } catch (e: Exception) {
                 Toast.makeText(context, e.message, Toast.LENGTH_SHORT).show()
             }
         }
