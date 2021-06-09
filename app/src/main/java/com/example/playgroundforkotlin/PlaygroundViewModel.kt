@@ -8,26 +8,26 @@ import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
-import io.appwrite.AppwriteClient
+import io.appwrite.Client
 import io.appwrite.exceptions.AppwriteException
-import io.appwrite.services.AccountService
-import io.appwrite.services.DatabaseService
+import io.appwrite.services.Account
+import io.appwrite.services.Database
 import kotlinx.coroutines.launch
 import org.json.JSONObject
 
 class PlaygroundViewModel : ViewModel() {
     private val collectionId = "608faab562521"
-    lateinit var client : AppwriteClient
+    lateinit var client : Client
     fun create(context: Context) {
-        client = AppwriteClient(context)
+        client = Client(context)
             .setEndpoint("https://demo.appwrite.io/v1")
             .setProject("608fa1dd20ef0")
     }
     private val account by lazy {
-        AccountService(client)
+        Account(client)
     }
     private val db by lazy {
-        DatabaseService(client)
+        Database(client)
     }
 
     private val _user = MutableLiveData<JSONObject>().apply {
@@ -94,7 +94,7 @@ class PlaygroundViewModel : ViewModel() {
                 var response = db.createDocument(collectionId,mapOf("username" to "Android"), listOf("*"),
                     listOf("*"))
                 var json = response.body?.string() ?: ""
-                json = JSONObject(json).toString(8)
+//                json = JSONObject(json).toString(8)
                 Toast.makeText(context, json, Toast.LENGTH_LONG).show()
             } catch (e: AppwriteException) {
                 Toast.makeText(context, e.message, Toast.LENGTH_SHORT).show()
