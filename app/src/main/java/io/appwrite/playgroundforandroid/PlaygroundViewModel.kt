@@ -1,4 +1,4 @@
-package com.example.playgroundforkotlin
+package io.appwrite.playgroundforandroid
 
 import android.content.ContentResolver
 import android.content.Context

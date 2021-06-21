@@ -4,7 +4,7 @@ Appwrite playground is a simple way to explore the Appwrite API & Appwrite Andro
 
 ## Get Started
 
-The **app/src/main/java/com/example/playgroundforkotlin/PlaygroundViewModel.kt** file contains all the playground examples and source code.
+The **app/src/main/java/com/example/playgroundforandroid/PlaygroundViewModel.kt** file contains all the playground examples and source code.
 
 You can learn how to integrate your Appwrite Android SDK in your project and see different features of the SDK that can be used.
 

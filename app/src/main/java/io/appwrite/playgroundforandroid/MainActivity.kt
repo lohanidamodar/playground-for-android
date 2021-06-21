@@ -1,4 +1,4 @@
-package com.example.playgroundforkotlin
+package io.appwrite.playgroundforandroid
 
 import android.Manifest
 import android.content.pm.PackageManager
@@ -12,7 +12,7 @@ import androidx.activity.result.contract.ActivityResultContracts
 import androidx.core.content.ContextCompat
 import androidx.lifecycle.Observer
 import androidx.lifecycle.ViewModelProvider
-import com.google.android.material.snackbar.Snackbar
+import io.appwrite.playgroundforandroid.R
 
 class MainActivity : AppCompatActivity() {
     private lateinit var viewModel: PlaygroundViewModel
