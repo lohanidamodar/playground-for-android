@@ -64,6 +64,17 @@
             android:layout_width="match_parent"
             android:layout_height="32dp" />
 
+        <Button
+            android:id="@+id/uploadFile"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Upload File"
+            app:backgroundTint="#B81B1B" />
+
+        <Space
+            android:layout_width="match_parent"
+            android:layout_height="32dp" />
+
         <TextView
             android:id="@+id/textView"
             android:textAlignment="center"
