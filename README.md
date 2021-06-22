@@ -2,6 +2,8 @@
 
 Appwrite playground is a simple way to explore the Appwrite API & Appwrite Android SDK. Use the source code of this page to learn how different Appwrite Android SDK features.
 
+This is Appwrite Flutter integration. For Dart server side integration please look at our [Kotlin Playground](https://github.com/appwrite/playground-for-kotlin) and [Kotlin SDK](https://github.com/appwrite/sdk-for-kotlin)
+
 ## Get Started
 
 The **app/src/main/java/com/example/playgroundforandroid/PlaygroundViewModel.kt** file contains all the playground examples and source code.
